@@ -37,7 +37,7 @@
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
 
 		<header>
-			<a href="/" class="home-link">{{ metadata.title }}</a>
+			<a href="/" class="home-link"><img src="../../img/site-logo.png" height="50" width="75" alt="site logo"></a>
 
 			{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
 			<nav>
@@ -46,6 +46,8 @@
 				{%- for entry in collections.all | eleventyNavigation %}
 					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
 				{%- endfor %}
+				<li class="nav-item"><a href="/contact/" aria-current="page">Contact Me</a></li>
+				<li class="nav-item"><a href="/gallery/" aria-current="page">Gallery</a></li>
 				</ul>
 			</nav>
 		</header>
